@@ -32,6 +32,20 @@
             border-bottom: 4px solid #0E3A4A;
             padding-bottom: 20px;
         }
+
+        .logo-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .logo-container img {
+            height: 100px;
+            width: auto;
+        }
         
         h1 {
             color: #0E3A4A;
@@ -142,6 +156,16 @@
         .contact-info p {
             margin: 8px 0;
         }
+
+        .contact-info a {
+            color: #0E3A4A;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
         
         .strong {
             font-weight: 600;
@@ -170,6 +194,12 @@
             border-radius: 8px;
             padding: 20px;
             text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contribution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(14, 58, 74, 0.2);
         }
         
         .contribution-card h4 {
@@ -189,10 +219,24 @@
         footer {
             text-align: center;
             margin-top: 40px;
-            padding-top: 20px;
+            padding: 30px 20px 20px;
             border-top: 2px solid #ddd;
             color: #666;
             font-size: 0.95em;
+        }
+
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logos img {
+            height: 60px;
+            width: auto;
         }
         
         @media (max-width: 768px) {
@@ -219,6 +263,14 @@
             th, td {
                 padding: 10px;
             }
+
+            .logo-container {
+                gap: 15px;
+            }
+
+            .logo-container img {
+                height: 80px;
+            }
         }
         
         @media print {
@@ -236,6 +288,10 @@
 <body>
     <div class="container">
         <header>
+            <div class="logo-container">
+                <img src="TWT-Logo-Full.png" alt="The Welcoming Table Logo">
+                <img src="Stronghold-Logo-Full.png" alt="The Stronghold Logo">
+            </div>
             <h1>The Welcoming Table & The Stronghold at Renovo</h1>
             <p class="subtitle">Program Descriptions for Contribution-Funded Initiatives</p>
             <p><strong>Location:</strong> TBD, Renovo, PA</p>
@@ -272,7 +328,7 @@
                 <li>Peer support meetings focused on recovery and wellness</li>
                 <li>Facilitated by trained peer specialists with lived experience in recovery</li>
                 <li>Provides a safe, stigma-free environment for individuals seeking support</li>
-                <li>Leverages Amanda Lynch's extensive background in peer support and recovery coaching</li>
+                <li>Led by Todd M. Lynch (Georgia Certified Peer Specialist) and Amanda Lynch (with decades of lived experience in resource navigation)</li>
             </ul>
 
             <h4>Resource Navigation Services</h4>
@@ -314,6 +370,28 @@
                     <li><strong>Public Accessibility:</strong> All programs are open to the public regardless of faith background or economic status</li>
                 </ul>
             </div>
+
+            <h3>Leadership Team</h3>
+
+            <h4>Todd M. Lynch – Operations & Recovery Lead</h4>
+            <p>Todd brings extensive professional credentials and lived experience to his role as Secretary and co-founder:</p>
+            <ul>
+                <li><strong>Georgia Certified Peer Specialist – Mental & Whole Health (GACPS-MH/WH)</strong> – Certified peer support specialist</li>
+                <li><strong>Master's Degree in Human Services Counseling</strong> from Liberty University</li>
+                <li><strong>Bachelor's Degree in Christian Counseling</strong> from Liberty University</li>
+                <li><strong>Associate's Degree in Religion</strong> from Liberty University</li>
+                <li><strong>3+ years clinical and practical experience</strong> in peer support and resource navigation</li>
+                <li><strong>15 years emergency services experience</strong> as a former Firefighter, EMT-B/IV Tech, and 911 Dispatcher in Maryland</li>
+            </ul>
+
+            <h4>Amanda Lynch – Community Engagement & Food Services Lead</h4>
+            <p>Amanda brings practical experience and deep community roots to her role as President and co-founder:</p>
+            <ul>
+                <li><strong>Pursuing Bachelor's Degree in Ministry</strong> with Lancaster Bible College</li>
+                <li><strong>Decades of kitchen and food service experience</strong> across numerous restaurant settings</li>
+                <li><strong>Extensive lived experience navigating resources</strong> for housing, mental health, family services, SNAP/EBT, and homelessness support</li>
+                <li><strong>Committed to peer mentorship</strong> – dedicated to sharing her experience to help others during their difficult times</li>
+            </ul>
         </section>
 
         <section>
@@ -480,15 +558,21 @@
             
             <div class="contact-info">
                 <p><strong>Project Leadership:</strong> Todd & Amanda Lynch</p>
-                <p><strong>Email:</strong> thewelcomingtable@pm.me / fallenrockenterprisesllc@pm.me</p>
-                <p><strong>Phone:</strong> (570) 660-9579</p>
+                <p><strong>Email:</strong> <a href="mailto:thewelcomingtable@pm.me">thewelcomingtable@pm.me</a> / <a href="mailto:fallenrockenterprisesllc@pm.me">fallenrockenterprisesllc@pm.me</a></p>
+                <p><strong>Phone:</strong> <a href="tel:5706609579">(570) 660-9579</a></p>
                 <p style="margin-top: 15px;">For information about contributing, investing, volunteering, or requesting a building tour, contact Todd or Amanda directly.</p>
             </div>
         </section>
 
         <footer>
-            <p>The Welcoming Table & The Stronghold at Renovo | Program Descriptions</p>
-            <p>Generated: December 8, 2025</p>
+            <div class="footer-logos">
+                <img src="TWT-Logo-Full.png" alt="The Welcoming Table">
+                <img src="FRE-Logo-Full.png" alt="Fallen Rock Enterprises">
+            </div>
+            <p>The Welcoming Table & The Stronghold at Renovo</p>
+            <p>A project of The Welcoming Table nonprofit and Fallen Rock Enterprises, LLC</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">© 2025 The Welcoming Table | All Rights Reserved</p>
+            <p style="margin-top: 15px; font-size: 0.85em; color: #999;">Version 3 | Updated December 8, 2025</p>
         </footer>
     </div>
 </body>
