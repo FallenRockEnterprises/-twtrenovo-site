@@ -1,1 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todd & Amanda Lynch – Founders of The Welcoming Table</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Shared nav */
+        .main-nav {
+            background-color: #0E3A4A;
+            color: #fff;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
+
+        .nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-links a {
+            color: #E8F4F8;
+            text-decoration: none;
+            font-size: 0.95em;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-cta {
+            background-color: #FFF3E0;
+            color: #0E3A4A !important;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #0E3A4A;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #0E3A4A;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        h2 {
+            color: #0E3A4A;
+            font-size: 1.8em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-left: 5px solid #B4713A;
+            padding-left: 15px;
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: #1A6872;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #2A7A8F;
+            font-size: 1.1em;
+            margin-top: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-family: 'League Spartan', sans-serif;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .bio-wrapper {
+            display: grid;
+            grid-template-columns: minmax(160px, 220px) 1fr;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .bio-photo {
+            width: 100%;
+            max-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+            object-fit: cover;
+        }
+
+        .section-box {
+            background-color: #f0f4f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #5CA5C9;
+        }
+
+        .highlight {
+            background-color: #FFF3E0;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 4px solid #B4713A;
+        }
+
+        .vision-list li {
+            margin-bottom: 12px;
+        }
+
+        .book-links {
+            margin-top: 10px;
+        }
+
+        .book-links a {
+            color: #0E3A4A;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .book-links a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form-placeholder {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 2px dashed #B4713A;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px 20px 20px;
+            border-top: 2px solid #ddd;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .nav-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+
+            .bio-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .bio-photo {
+                max-width: 260px;
+                justify-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">The Stronghold at Renovo</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="welcoming-table.html">The Welcoming Table</a>
+                <a href="fallen-rock-enterprises.html">Fallen Rock Enterprises</a>
+                <a href="todd-amanda.html">Todd &amp; Amanda</a>
+                <a href="get-involved.html" class="nav-cta">Get Involved</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Meet the Founders</h1>
+            <p class="subtitle">Todd &amp; Amanda “Mandi” Lynch – Partners in life, recovery, and ministry.</p>
+        </header>
+
+        <section>
+            <div class="section-box">
+                <p>The Welcoming Table is led by Todd &amp; Amanda “Mandi” Lynch, a husband-and-wife team dedicated to the belief that recovery is a journey best traveled together. They are the co-authors of the daily recovery devotional <strong>This Pain Will Be Useful</strong>, and partners in every sense of the word.</p>
+                <p>Driven by their own testimony of mutual recovery from substance use and mental health challenges, Todd and Mandi established this ministry to create a sacred, inclusive space where faith and recovery meet.</p>
+                <div class="book-links">
+                    <!-- TODO: Insert actual book links when available -->
+                    <p><strong>Books by Todd &amp; Mandi:</strong></p>
+                    <ul>
+                        <li><a href="#this-pain-link">This Pain Will Be Useful</a> (link coming soon)</li>
+                        <li><a href="#wisdom-in-practice-link">Wisdom in Practice</a> (link coming soon)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Todd M. Lynch, MAHS, CPS-MH/WH (GA)</h2>
+            <div class="bio-wrapper">
+                <img src="image/todd-bio-pic.png" alt="Photo of Todd M. Lynch" class="bio-photo">
+                <div>
+                    <p>Todd brings a wealth of experience and structural guidance to the ministry. With a background rooted in professional excellence and spiritual inquiry, he is the author of <strong>Wisdom in Practice</strong>, a work that reflects his commitment to applying knowledge in transformative ways.</p>
+                    <p>Todd has a background as a firefighter, an EMT-B/IV Tech (MD), and a 911 dispatcher. He also served in the past as a line officer for the Havre de Grace (MD) Ambulance Corps, holding the ranks of Lieutenant and Captain. Due to mental and physical health issues, Todd was forced to step away from those careers and pursue his education.</p>
+                    <p>He holds an Associate’s in Religion, a Bachelor’s in Christian Counseling, and a Master of Arts in Human Services Counseling, all from Liberty University. He is a Certified Peer Specialist in Mental and Whole Health (GA) and has worked extensively in mental health care both clinically and in advocacy.</p>
+                    <p>Todd is a member of NAMI (National Alliance on Mental Illness), and is a trainer and presenter on local, state, and national levels. He is also a certified instructor for the L.E.A.P. program of Dr. Xavier Amador’s LEAP Institute.</p>
+                    <p>Todd creates the framework for The Welcoming Table’s curriculum and gatherings, but he is the first to say that his credentials and accomplishments are not his alone. Every milestone he has reached has been supported and shared by Mandi. Todd’s vision is to use his qualifications not as a pedestal, but as a foundation to build a movement of healing and hope for others.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Amanda “Mandi” Lynch</h2>
+            <div class="bio-wrapper">
+                <img src="image/mandi-bio-pic.png" alt="Photo of Amanda Mandi Lynch" class="bio-photo">
+                <div>
+                    <p>Mandi is the heartbeat of The Welcoming Table. Having navigated profound personal trials and overcome obstacles that would have stopped many others, they stand today as a testament to the power of resilience. Mandi’s journey through the darkness of mental illness and addiction has forged in them a deep well of empathy.</p>
+                    <p>Mandi is driven by a passionate desire to give back in the many ways they have been given to. They believe that their survival was for a purpose: to offer radical acceptance to those still struggling. Mandi is an equal partner in every one of the couple’s successes, providing the insight, courage, and spiritual honesty that makes this ministry possible.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Their Shared Vision</h2>
+            <div class="highlight">
+                <ul class="vision-list">
+                    <li><strong>To model that “Couples DO Recover”:</strong> Showing that relationships can heal and thrive after trauma.</li>
+                    <li><strong>To offer Relational Evangelism:</strong> Showing Christ’s love first and foremost, ensuring everyone feels seen and valued.</li>
+                    <li><strong>To expand access:</strong> Working toward a future where mental health support, recovery coaching, and spiritual care are accessible to all.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Todd &amp; Mandi</h2>
+            <div class="contact-form-placeholder">
+                <!-- Placeholder for future contact form -->
+                <p>A contact form will be placed here to reach Todd &amp; Mandi directly about The Welcoming Table, speaking invitations, or collaboration.</p>
+                <p><em>(Form integration coming soon.)</em></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Todd &amp; Amanda “Mandi” Lynch – The Welcoming Table</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">© 2025 The Welcoming Table | All Rights Reserved</p>
+            <p style="margin-top: 15px; font-size: 0.85em; color: #999;">Version 1 | Todd &amp; Amanda Bio Page</p>
+        </footer>
+    </div>
+</body>
+</html>
 
