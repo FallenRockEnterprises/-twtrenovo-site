@@ -291,9 +291,77 @@
                 max-width: 100%;
             }
         }
+.main-nav {
+    background-color: #0E3A4A;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.nav-links a {
+    color: #E8F4F8;
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-cta {
+    background-color: #FFF3E0;
+    color: #0E3A4A !important;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+    
+@media (max-width: 768px) {
+    .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+}
     </style>
 </head>
 <body>
+<nav class="main-nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-brand">The Stronghold at Renovo</a>
+        <div class="nav-links">
+            <a href="welcoming-table.html">The Welcoming Table</a>
+            <a href="fallen-rock-enterprises.html">Fallen Rock Enterprises</a>
+            <a href="todd-amanda.html">Todd &amp; Amanda</a>
+            <a href="get-involved.html" class="nav-cta">Get Involved</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
     <div class="container">
         <header>
             <div class="logo-container">
