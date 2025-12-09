@@ -1,1 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved – The Welcoming Table & The Stronghold</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
 
+        .main-nav {
+            background-color: #0E3A4A;
+            color: #fff;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
+
+        .nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-links a {
+            color: #E8F4F8;
+            text-decoration: none;
+            font-size: 0.95em;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-cta {
+            background-color: #FFF3E0;
+            color: #0E3A4A !important;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #0E3A4A;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #0E3A4A;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+
+        h2 {
+            color: #0E3A4A;
+            font-size: 1.8em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-left: 5px solid #B4713A;
+            padding-left: 15px;
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: #1A6872;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #0E3A4A;
+            font-size: 1.1em;
+            margin-top: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-family: 'League Spartan', sans-serif;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .section-box {
+            background-color: #f0f4f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #5CA5C9;
+        }
+
+        .highlight {
+            background-color: #FFF3E0;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 4px solid #B4713A;
+        }
+
+        .three-column {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .contribution-card {
+            background-color: #fff;
+            border: 2px solid #5CA5C9;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contribution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(14, 58, 74, 0.2);
+        }
+
+        .contribution-card h4 {
+            color: #0E3A4A;
+            margin-bottom: 10px;
+        }
+
+        .contribution-card p {
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+
+        .contribution-card ul {
+            list-style: none;
+            margin-left: 0;
+            text-align: left;
+        }
+
+        .contribution-card li {
+            margin-bottom: 8px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            margin-top: 12px;
+        }
+
+        .btn-primary {
+            background-color: #0E3A4A;
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background-color: #FFF3E0;
+            color: #0E3A4A;
+            border: 1px solid #B4713A;
+        }
+
+        .impact-list li {
+            margin-bottom: 12px;
+        }
+
+        .gvng-campaign {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 30px;
+            align-items: center;
+            background-color: #f0f4f7;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #5CA5C9;
+        }
+
+        .gvng-qr {
+            text-align: center;
+        }
+
+        .gvng-qr img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+
+        .gvng-content p {
+            margin-bottom: 12px;
+            color: #444;
+        }
+
+        .gvng-content a {
+            display: inline-block;
+            background-color: #0E3A4A;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        .gvng-content a:hover {
+            background-color: #1A6872;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px 20px 20px;
+            border-top: 2px solid #ddd;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .nav-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+
+            .gvng-campaign {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .gvng-qr {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">The Stronghold at Renovo</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="welcoming-table.html">The Welcoming Table</a>
+                <a href="fallen-rock-enterprises.html">Fallen Rock Enterprises</a>
+                <a href="todd-amanda.html">Todd &amp; Amanda</a>
+                <a href="get-involved.html" class="nav-cta">Get Involved</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Get Involved</h1>
+            <p class="subtitle">Support The Welcoming Table and The Stronghold at Renovo in ways that match your passion and capacity.</p>
+        </header>
+
+        <section>
+            <h2>Why Your Support Matters</h2>
+            <div class="section-box">
+                <p>The Stronghold at Renovo is a hybrid model that combines a 501(c)(3) nonprofit ministry (The Welcoming Table) with a for-profit business venture (Fallen Rock Enterprises). Your support helps sustain:</p>
+                <ul class="impact-list">
+                    <li>Free or donation-based community meals for anyone in Renovo</li>
+                    <li>Recovery support groups and peer-led programming</li>
+                    <li>One-on-one resource navigation and spiritual care</li>
+                    <li>Safe, youth-friendly recreational spaces and gaming events</li>
+                    <li>Facilities that serve as a welcoming gathering place for the entire community</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Three Ways to Give</h2>
+            <div class="three-column">
+                <div class="contribution-card">
+                    <h4>Sponsorships</h4>
+                    <p><strong>Tax-Deductible</strong></p>
+                    <ul>
+                        <li>$250–$10,000+</li>
+                        <li>Donations to The Welcoming Table nonprofit</li>
+                        <li>Fund specific items: meals, gaming tables, kitchen equipment</li>
+                        <li>Named sponsorship recognition available</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Sponsor Today</a>
+                </div>
+
+                <div class="contribution-card">
+                    <h4>Community Loans</h4>
+                    <p><strong>Private Loans</strong></p>
+                    <ul>
+                        <li>$500–$10,000</li>
+                        <li>To Fallen Rock Enterprises</li>
+                        <li>24–36 month terms, 0–5% interest</li>
+                        <li>Secured by property lien, revenue share, or guarantee</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary">Discuss Terms</a>
+                </div>
+
+                <div class="contribution-card">
+                    <h4>Impact Gifts</h4>
+                    <p><strong>Direct Donations</strong></p>
+                    <ul>
+                        <li>Any amount</li>
+                        <li>Fully tax-deductible</li>
+                        <li>Support the mission broadly</li>
+                        <li>No restrictions</li>
+                    </ul>
+                    <a href="#gvng-section" class="btn-primary">Give Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Volunteer Opportunities</h2>
+            <p>The Welcoming Table relies on passionate volunteers to make community gatherings, meals, and support circles possible. Here are ways to serve:</p>
+
+            <h3>Community Meals</h3>
+            <p>Help prepare, cook, or serve nutritious meals to the community. Whether you have culinary experience or simply want to help, all skill levels are welcome.</p>
+
+            <h3>Peer Support Facilitation</h3>
+            <p>If you have lived experience in recovery and are interested in supporting others, we offer training for peer facilitators. Contact Todd and Mandi to learn more about this role.</p>
+
+            <h3>Administrative &amp; Outreach</h3>
+            <p>Help with scheduling, communications, resource coordination, and community outreach. This could include phone calls, email coordination, or event planning.</p>
+
+            <h3>Gaming &amp; Youth Events</h3>
+            <p>Assist with setup, facilitation, and supervision of Magic, D&amp;D, and other tabletop gaming nights. Great for those passionate about youth engagement.</p>
+
+            <h3>Transportation &amp; Accessibility</h3>
+            <p>Provide rides for participants who lack reliable transportation, or help ensure our spaces meet accessibility needs for people with disabilities.</p>
+
+            <h3>Professional Skills &amp; In-Kind Donations</h3>
+            <p>Do you have expertise in graphic design, accounting, grant writing, or another field? We welcome pro-bono professional services and donations of supplies, furniture, or equipment.</p>
+
+            <div class="highlight">
+                <p><strong>Ready to volunteer?</strong> <a href="contact.html">Contact Todd &amp; Mandi</a> to discuss how your gifts and availability can make an impact.</p>
+            </div>
+        </section>
+
+        <section id="gvng-section">
+            <h2>Support The Stronghold Campaign</h2>
+            <div class="gvng-campaign">
+                <div class="gvng-qr">
+                    <img src="image/qr-twt-ca.png" alt="QR Code to The Welcoming Table Campaign">
+                    <p style="margin-top: 12px; font-size: 0.9em; color: #666;"><strong>Scan to Give</strong></p>
+                </div>
+                <div class="gvng-content">
+                    <p><strong>The most direct way to fund the capital renovation and launch of The Stronghold at Renovo</strong> is through our community fundraising campaign on GVNG.org.</p>
+                    <p>Every dollar goes toward:</p>
+                    <ul style="margin-left: 20px;">
+                        <li>Down payment on the property</li>
+                        <li>Essential renovations (HVAC, kitchen certification, electrical, security)</li>
+                        <li>Operational reserves for the first three months</li>
+                        <li>Furniture, fixtures, and equipment for community spaces</li>
+                    </ul>
+                    <a href="https://app.gvng.org/campaign/the-stronghold-at-renovo-by-the-welcoming-table-fallen-rock-enterprises-llc/overview" target="_blank" rel="noopener noreferrer">
+                        Give Through GVNG.org
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Other Ways to Support</h2>
+            <ul class="impact-list">
+                <li><strong>Attend Events:</strong> Show up for community meals, gaming nights, or worship gatherings. Your presence is community.</li>
+                <li><strong>Spread the Word:</strong> Share our mission with friends, family, and colleagues. Word-of-mouth is powerful.</li>
+                <li><strong>Connect Resources:</strong> Know a landlord, contractor, or service provider who believes in this work? Make an introduction.</li>
+                <li><strong>Advocate Locally:</strong> Support zoning approvals, attend city meetings, and encourage local government and business support.</li>
+                <li><strong>Pray &amp; Hold Us in Thought:</strong> Spiritual support and intercession are vital. If faith is central to your life, we invite your prayers.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Questions?</h2>
+            <div class="section-box">
+                <p>If you have questions about giving, volunteering, or any aspect of The Welcoming Table or The Stronghold, reach out directly. Todd and Mandi are accessible and eager to discuss how you can be part of building a movement of healing and hope in Renovo.</p>
+                <a href="contact.html" class="btn-primary">Contact the Team</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>The Welcoming Table &amp; The Stronghold at Renovo</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">© 2025 The Welcoming Table | All Rights Reserved</p>
+            <p style="margin-top: 15px; font-size: 0.85em; color: #999;">Version 1 | Get Involved Page</p>
+        </footer>
+    </div>
+</body>
+</html>
