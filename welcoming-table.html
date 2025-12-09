@@ -1,1 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Welcoming Table – Mission, Values & Vision</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
 
+        .main-nav {
+            background-color: #0E3A4A;
+            color: #fff;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
+
+        .nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-links a {
+            color: #E8F4F8;
+            text-decoration: none;
+            font-size: 0.95em;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-cta {
+            background-color: #FFF3E0;
+            color: #0E3A4A !important;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #0E3A4A;
+            padding-bottom: 20px;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .logo-container img {
+            height: 100px;
+            width: auto;
+        }
+        
+        h1 {
+            color: #0E3A4A;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+        
+        h2 {
+            color: #0E3A4A;
+            font-size: 1.8em;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-left: 5px solid #B4713A;
+            padding-left: 15px;
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+        }
+        
+        h3 {
+            color: #1A6872;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #2A7A8F;
+            font-size: 1.1em;
+            margin-top: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-family: 'League Spartan', sans-serif;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .mission-statement {
+            font-style: italic;
+            color: #1A6872;
+            background-color: #E8F4F8;
+            padding: 15px;
+            border-left: 4px solid #0E3A4A;
+            margin: 15px 0;
+        }
+        
+        .section-box {
+            background-color: #f0f4f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #5CA5C9;
+        }
+
+        .scripture-block {
+            background-color: #E8F4F8;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border-left: 4px solid #0E3A4A;
+        }
+
+        .scripture-block .reference {
+            font-weight: 600;
+            color: #0E3A4A;
+            margin-bottom: 8px;
+        }
+
+        .scripture-block .text {
+            font-style: italic;
+            color: #1A6872;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        .scripture-block .relevance {
+            color: #444;
+            font-size: 0.9em;
+            padding-left: 12px;
+            border-left: 2px solid #B4713A;
+        }
+
+        .gathering-section {
+            background-color: #FFF3E0;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border-left: 4px solid #B4713A;
+        }
+
+        .goal-list li {
+            margin-bottom: 12px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px 20px 20px;
+            border-top: 2px solid #ddd;
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logos img {
+            height: 60px;
+            width: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            h3 {
+                font-size: 1.2em;
+            }
+
+            .nav-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">The Stronghold at Renovo</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="welcoming-table.html">The Welcoming Table</a>
+                <a href="fallen-rock-enterprises.html">Fallen Rock Enterprises</a>
+                <a href="todd-amanda.html">Todd &amp; Amanda</a>
+                <a href="get-involved.html" class="nav-cta">Get Involved</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="image/TWT-Logo-Full.png" alt="The Welcoming Table Logo">
+            </div>
+            <h1>The Welcoming Table</h1>
+            <p class="subtitle">Mission, Values, Vision &amp; Structure</p>
+        </header>
+
+        <section>
+            <h2>Mission &amp; Values Statement</h2>
+            <div class="mission-statement">
+                The Welcoming Table is a nondenominational Christian ministry dedicated to creating a sacred and inclusive space where all individuals can explore spirituality with love, grace, and compassion. Rooted in love, authenticity, and radical acceptance, we foster a community where everyone is seen, valued, and empowered on their spiritual journey. At The Welcoming Table, all are invited to share in grace, growth, and belonging, without fear or exclusion.
+            </div>
+            <p>The Welcoming Table's Mission and Values find their foundation in the Word of God, as recorded in The Holy Bible. No matter what an individual's personal beliefs (or lack thereof), The Welcoming Table strives to embody our name, by welcoming all who seek a rest at the table.</p>
+        </section>
+
+        <section>
+            <h2>Scriptural Foundation</h2>
+            <p>The following is a listing of Scripture supporting The Welcoming Table's Mission and Values. This is NOT an exhaustive list, but a sampling of Scriptural Justification for our Mission.</p>
+
+            <h3>Supporting Inclusivity &amp; Radical Acceptance</h3>
+            <p><em>"All are invited," "without fear or exclusion"</em></p>
+
+            <div class="scripture-block">
+                <div class="reference">Romans 15:7 (NLT)</div>
+                <div class="text">"Therefore, accept each other just as Christ has accepted you, so that God will be given glory."</div>
+                <div class="relevance"><strong>Relevance:</strong> Directly speaks to accepting others as Christ accepted us, forming the foundation for radical acceptance and inclusivity.</div>
+            </div>
+
+            <div class="scripture-block">
+                <div class="reference">Galatians 3:28 (NLT)</div>
+                <div class="text">"There is no longer Jew or Gentile, slave or free, male or female. For you are all one in Christ Jesus."</div>
+                <div class="relevance"><strong>Relevance:</strong> Emphasizes the unity and equality of all people in Christ, transcending traditional divisions, which strongly supports the "all are invited" and "without fear or exclusion" aspects.</div>
+            </div>
+
+            <div class="scripture-block">
+                <div class="reference">Luke 14:23 (NLT)</div>
+                <div class="text">"Then the master said to his servant, 'Go out to the roads and country lanes and compel them to come in, so that my house will be full.'"</div>
+                <div class="relevance"><strong>Relevance:</strong> This parable illustrates a divine desire for the inclusion of many, even those from the margins, to join the "feast" or community.</div>
+            </div>
+
+            <h3>Supporting Love, Grace, &amp; Compassion</h3>
+            <p><em>"Explore spirituality with love, grace, and compassion"</em></p>
+
+            <div class="scripture-block">
+                <div class="reference">1 John 4:7-8 (NLT)</div>
+                <div class="text">"Dear friends, let us continue to love one another, for love comes from God. Anyone who loves is a child of God and knows God. But anyone who does not love does not know God, for God is love."</div>
+                <div class="relevance"><strong>Relevance:</strong> Establishes love as fundamental to knowing God and interacting with others, aligning perfectly with the ministry's emphasis on love.</div>
+            </div>
+
+            <div class="scripture-block">
+                <div class="reference">Ephesians 2:8-9 (NLT)</div>
+                <div class="text">"God saved you by his grace when you believed. And you can't take credit for this; it is a gift from God. Salvation is not a reward for the good things we have done, so none of us can boast."</div>
+                <div class="relevance"><strong>Relevance:</strong> Highlights the central role of God's grace, which the ministry invites people to "share in."</div>
+            </div>
+
+            <div class="scripture-block">
+                <div class="reference">Colossians 3:12 (NLT)</div>
+                <div class="text">"Since God chose you to be holy people whom he loves, you must clothe yourselves with tenderhearted mercy, kindness, humility, gentleness, and patience."</div>
+                <div class="relevance"><strong>Relevance:</strong> Encourages embodying qualities like tenderhearted mercy (compassion) and kindness in our interactions.</div>
+            </div>
+
+            <h3>Supporting Community, Being Seen, Valued, &amp; Empowered</h3>
+            <p><em>"Foster a community where everyone is seen, valued, and empowered"</em></p>
+
+            <div class="scripture-block">
+                <div class="reference">1 Corinthians 12:27 (NLT)</div>
+                <div class="text">"All of you together are Christ's body, and each of you is a part of it."</div>
+                <div class="relevance"><strong>Relevance:</strong> Speaks to the interconnectedness and value of each individual within the body of Christ, implying that each part is "seen" and "valued."</div>
+            </div>
+
+            <div class="scripture-block">
+                <div class="reference">Ephesians 4:16 (NLT)</div>
+                <div class="text">"He makes the whole body fit together perfectly. As each part does its own special work, it helps the other parts grow, so that the whole body is healthy and growing and full of love."</div>
+                <div class="relevance"><strong>Relevance:</strong> Reinforces the idea of individual empowerment ("does its own special work") contributing to collective growth and health within a community.</div>
+            </div>
+
+            <div class="scripture-block">
+                <div class="reference">Philippians 2:3-4 (NLT)</div>
+                <div class="text">"Don't do anything from selfish ambition or from a needless desire to impress others. Be humble, thinking of others as better than yourselves. Don't look out only for your own interests, but take an interest in others, too."</div>
+                <div class="relevance"><strong>Relevance:</strong> Encourages valuing others, putting their needs and interests forward, which fosters a community where everyone feels seen and valued.</div>
+            </div>
+
+            <h3>Supporting Growth &amp; Belonging</h3>
+            <p><em>"Share in grace, growth, and belonging"</em></p>
+
+            <div class="scripture-block">
+                <div class="reference">2 Peter 3:18 (NLT)</div>
+                <div class="text">"Rather, you must grow in the grace and knowledge of our Lord and Savior Jesus Christ. All glory to him, both now and forever! Amen."</div>
+                <div class="relevance"><strong>Relevance:</strong> Directly calls for spiritual "growth" in grace and knowledge.</div>
+            </div>
+
+            <div class="scripture-block">
+                <div class="reference">Psalm 133:1 (NLT)</div>
+                <div class="text">"How wonderful and pleasant it is when brothers and sisters live together in harmony!"</div>
+                <div class="relevance"><strong>Relevance:</strong> Celebrates the beauty of unity and harmony within a community, speaking to the desire for "belonging."</div>
+            </div>
+
+            <div class="scripture-block">
+                <div class="reference">Hebrews 10:24-25 (NLT)</div>
+                <div class="text">"Let us think of ways to motivate one another to acts of love and good works. And let us not neglect our meeting together, as some people do, but encourage one another, especially now that the day of his return is drawing near."</div>
+                <div class="relevance"><strong>Relevance:</strong> Encourages gathering together and mutual encouragement, which are vital for fostering belonging and shared growth within a spiritual community.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>The Great Commission &amp; Relational Evangelism</h2>
+            <p>The driving force of The Welcoming Table is found in The Great Commission:</p>
+
+            <div class="scripture-block">
+                <div class="reference">Matthew 28:19-20 (NLT)</div>
+                <div class="text">"Therefore, go and make disciples of all the nations, baptizing them in the name of the Father and the Son and the Holy Spirit. Teach these new disciples to obey all the commands I have given you. And be sure of this: I am with you always, even to the end of the age."</div>
+            </div>
+
+            <p>We want to show Christ's love, first and foremost, hoping to spark a desire in others to know God the Father, Jesus Christ the Son, and the Holy Spirit better. Ultimately, we aim to give everyone we encounter the opportunity to become followers of Christ, but never the mandate. The Welcoming Table views this approach as <strong>"relational evangelism."</strong></p>
+
+            <div class="scripture-block">
+                <div class="reference">Matthew 25:34-40 (NLT)</div>
+                <div class="text">"Then the King will say to those on his right, 'Come, you who are blessed by my Father, inherit the Kingdom prepared for you from the creation of the world. For I was hungry, and you fed me. I was thirsty, and you gave me a drink. I was a stranger, and you invited me into your home. I was naked, and you gave me clothing. I was sick, and you cared for me. I was in prison, and you visited me.' Then these righteous ones will reply, 'Lord, when did we ever see you hungry and feed you? Or thirsty and give you something to drink? Or a stranger and show you hospitality? Or naked and give you clothing? When did we ever see you sick or in prison and visit you?' And the King will say, 'I tell you the truth, when you did it to one of the least of these my brothers and sisters, you were doing it to me!'"</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Goals &amp; Vision</h2>
+            <p>At The Welcoming Table, we are building more than a gathering—we're building a movement of healing and hope.</p>
+
+            <h3>Short-Term Goals</h3>
+            <ul class="goal-list">
+                <li>Sustain and grow our weekly gatherings</li>
+                <li>Train volunteer facilitators in trauma-informed care</li>
+                <li>Provide basic resources: hygiene kits, journals, crisis line cards</li>
+                <li>Begin forming partnerships with local service providers</li>
+            </ul>
+
+            <h3>Long-Term Vision</h3>
+            <ul class="goal-list">
+                <li><strong>Secure Funding for a Physical Space</strong> – A warm, accessible location to host meetings, drop-in hours, wellness activities, and quiet rest</li>
+                <li><strong>Expand Community Resource Access</strong> – Partner with mental health providers, recovery coaches, and spiritual care workers to offer direct support and referrals</li>
+                <li><strong>Offer Transportation Support</strong> – Provide rides, bus passes, or volunteer shuttles for disabled participants or those without reliable transportation</li>
+                <li><strong>Center Accessibility and Inclusion</strong> – Ensure all events are ADA-compliant, inclusive of sensory needs, and welcoming for those with visible or invisible disabilities</li>
+                <li><strong>Host Retreats &amp; Training Events</strong> – Equip others to lead similar circles in their own communities—especially in underserved or rural areas</li>
+                <li><strong>Build a Mutual Aid Fund</strong> – Offer emergency assistance for medication, shelter, food, or recovery tools when possible</li>
+            </ul>
+
+            <div class="section-box">
+                <p><strong>Every chair at The Welcoming Table is sacred</strong> — whether someone is arriving with heavy grief or deep hope, there is a place here for them.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Weekly Gathering Structure</h2>
+            <p><strong>Duration:</strong> 2 Hours</p>
+            <p><strong>Purpose:</strong> A space where faith, recovery, mental health, and community care meet in authenticity, grace, and support.</p>
+
+            <h3>What Will Be Offered at Each Gathering</h3>
+
+            <div class="gathering-section">
+                <h4>1. Welcome &amp; Centering (10 minutes)</h4>
+                <ul>
+                    <li>Greeting, shared prayer or moment of silence</li>
+                    <li>Brief introduction to the day's theme</li>
+                </ul>
+            </div>
+
+            <div class="gathering-section">
+                <h4>2. Faith &amp; Recovery Discussion (30 minutes)</h4>
+                <ul>
+                    <li>A focused reflection tying together faith and the realities of recovery (from addiction, trauma, grief, or mental illness)</li>
+                    <li>Includes shared reading, testimony, or open question</li>
+                    <li>Grounded in compassion and spiritual honesty</li>
+                </ul>
+            </div>
+
+            <div class="gathering-section">
+                <h4>3. Mental Health Check-In (20 minutes)</h4>
+                <ul>
+                    <li>Group share around mental health challenges and wins</li>
+                    <li>Peer-led, non-judgmental, optional participation</li>
+                </ul>
+            </div>
+
+            <div class="gathering-section">
+                <h4>4. Small Group Connection (30 minutes)</h4>
+                <p>Breakout into smaller support circles:</p>
+                <ul>
+                    <li>Recovery</li>
+                    <li>Mental health</li>
+                    <li>Grief or loss</li>
+                    <li>Spiritual questions</li>
+                </ul>
+                <p style="margin-top: 10px;"><em>Safe space for deeper conversation and prayer</em></p>
+            </div>
+
+            <div class="gathering-section">
+                <h4>5. Rest &amp; Reflect (20 minutes)</h4>
+                <ul>
+                    <li>Optional Guided Meditation or Breathing Exercise</li>
+                    <li>Quiet time, journaling, creative art, or light snacks</li>
+                    <li>Space to breathe, rest, and just be</li>
+                </ul>
+            </div>
+
+            <div class="gathering-section">
+                <h4>6. Closing Circle (10 minutes)</h4>
+                <ul>
+                    <li>Regather for a final blessing, announcements, or a grounding exercise</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-logos">
+                <img src="image/TWT-Logo-Full.png" alt="The Welcoming Table Logo">
+            </div>
+            <p>The Welcoming Table – Renovo, Pennsylvania</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">© 2025 The Welcoming Table | All Rights Reserved</p>
+            <p style="margin-top: 15px; font-size: 0.85em; color: #999;">Version 1 | The Welcoming Table – Mission, Values &amp; Vision</p>
+        </footer>
+    </div>
+</body>
+</html>
