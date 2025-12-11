@@ -126,13 +126,22 @@
             border: 2px solid #5CA5C9;
             border-radius: 8px;
             padding: 20px;
-            text-align: left;
+            text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .contribution-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 4px 12px rgba(14, 58, 74, 0.2);
+        }
+
+        .card-logo {
+            height: 60px;
+            width: auto;
+            margin: 0 auto 15px;
         }
         
         .contribution-card h4 {
@@ -141,7 +150,22 @@
         }
 
         .contribution-card p {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            background-color: #FFF3E0;
+            color: #0E3A4A;
+            border: 1px solid #B4713A;
+            align-self: center;
+            margin-top: auto;
         }
 
         .hero-actions {
@@ -152,25 +176,15 @@
             justify-content: center;
         }
 
-        .btn-primary,
-        .btn-secondary {
+        .btn-primary {
             display: inline-block;
             padding: 10px 18px;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95em;
-        }
-
-        .btn-primary {
             background-color: #0E3A4A;
             color: #fff;
-        }
-
-        .btn-secondary {
-            background-color: #FFF3E0;
-            color: #0E3A4A;
-            border: 1px solid #B4713A;
         }
         
         footer {
@@ -224,62 +238,63 @@
                 max-width: 100%;
             }
         }
-.main-nav {
-    background-color: #0E3A4A;
-    color: #fff;
-    padding: 10px 20px;
-    margin-bottom: 10px;
-}
 
-.nav-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
+        .main-nav {
+            background-color: #0E3A4A;
+            color: #fff;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
 
-.nav-brand {
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 700;
-    font-size: 1.1em;
-    color: #fff;
-    text-decoration: none;
-    margin-bottom: 5px;
-}
+        .nav-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
+        .nav-brand {
+            font-family: 'League Spartan', sans-serif;
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
 
-.nav-links a {
-    color: #E8F4F8;
-    text-decoration: none;
-    font-size: 0.95em;
-    font-weight: 600;
-}
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
 
-.nav-links a:hover {
-    text-decoration: underline;
-}
+        .nav-links a {
+            color: #E8F4F8;
+            text-decoration: none;
+            font-size: 0.95em;
+            font-weight: 600;
+        }
 
-.nav-cta {
-    background-color: #FFF3E0;
-    color: #0E3A4A !important;
-    padding: 6px 10px;
-    border-radius: 4px;
-}
-    
-@media (max-width: 768px) {
-    .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-    }
-}
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-cta {
+            background-color: #FFF3E0;
+            color: #0E3A4A !important;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -314,24 +329,28 @@
             <h2>Our Divisions</h2>
             <div class="three-column">
                 <div class="contribution-card">
+                    <img src="image/FRCCLogo.png" alt="Fallen Rock Collectibles & Consignment Logo" class="card-logo">
                     <h4>Fallen Rock Collectibles &amp; Consignment</h4>
                     <p>High-volume online resale of trading cards, collectibles, and vintage goods, with opportunities for community consignors.</p>
                     <a href="/fallen-rock-collectibles" class="btn-secondary">View Division</a>
                 </div>
 
                 <div class="contribution-card">
+                    <img src="image/FREIPLogo.png" alt="Fallen Rock Entertainment Logo" class="card-logo">
                     <h4>Fallen Rock Entertainment</h4>
                     <p>Tabletop gaming events, tournaments, and creative storytelling projects that bring people together in a safe, fun environment.</p>
                     <a href="/fallen-rock-entertainment" class="btn-secondary">View Division</a>
                 </div>
 
                 <div class="contribution-card">
+                    <img src="image/FRRLogo.png" alt="Fallen Rock Resources Logo" class="card-logo">
                     <h4>Fallen Rock Resources</h4>
                     <p>Recovery-focused coaching, peer support, and resource navigation services offered as a professional, fee-based complement to nonprofit programs.</p>
                     <a href="/fallen-rock-resources" class="btn-secondary">View Division</a>
                 </div>
 
                 <div class="contribution-card">
+                    <img src="image/FRPLogo.png" alt="Fallen Rock Properties Logo" class="card-logo">
                     <h4>Fallen Rock Properties</h4>
                     <p>Longer-term vision for affordable and second-chance housing projects that expand stability and opportunity in the region.</p>
                     <a href="/fallen-rock-properties" class="btn-secondary">View Division</a>
@@ -345,7 +364,7 @@
                 <ul>
                     <li>Lease payments help cover the mortgage and essential operating costs of The Stronghold facility.</li>
                     <li>Business activity creates local work, skill-building, and leadership opportunities for people connected to Renovo.</li>
-                    <li>Events and services draw new visitors into the hub, where they can also discover The Welcoming Table’s community programs.</li>
+                    <li>Events and services draw new visitors into the hub, where they can also discover The Welcoming Table's community programs.</li>
                     <li>Shared planning ensures that business operations and nonprofit programs strengthen one another while respecting clear boundaries.</li>
                 </ul>
             </div>
@@ -370,4 +389,3 @@
     </div>
 </body>
 </html>
-
